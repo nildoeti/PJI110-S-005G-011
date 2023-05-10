@@ -254,7 +254,6 @@ include_once "./conexao.php";
 	</footer>
 
 	<script src="./js/script.js" charset="utf-8"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD61o9WS-jBZBbsyrGtJqxXuvmTrj5TOaQ&callback=Map123"></script>
 </body>
 
 </html>
