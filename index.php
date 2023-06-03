@@ -202,28 +202,28 @@ include_once "./conexao.php";
 				<p>Passe por aqui para tomar uma xícara de <i class="fa fa-coffee"></i>, ou deixe-me um recado:</p>
 
 				<?php
-    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+                    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-    if (!empty($dados['AddMsgCont'])) {
-        //var_dump($dados);
+                    if (!empty($dados['AddMsgCont'])) {
+                        //var_dump($dados);
 
-        $query_contato = "INSERT INTO contatos (nome, email, assunto, conteudo) VALUES (:nome, :email, :assunto, :conteudo)";
-        $add_contato = $conn->prepare($query_contato);
-        $add_contato->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
-        $add_contato->bindParam(':email', $dados['email'], PDO::PARAM_STR);
-        $add_contato->bindParam(':assunto', $dados['assunto'], PDO::PARAM_STR);
-        $add_contato->bindParam(':conteudo', $dados['conteudo'], PDO::PARAM_STR);
+                        $query_contato = "INSERT INTO contatos (nome, email, assunto, conteudo) VALUES (:nome, :email, :assunto, :conteudo)";
+                        $add_contato = $conn->prepare($query_contato);
+                        $add_contato->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
+                        $add_contato->bindParam(':email', $dados['email'], PDO::PARAM_STR);
+                        $add_contato->bindParam(':assunto', $dados['assunto'], PDO::PARAM_STR);
+                        $add_contato->bindParam(':conteudo', $dados['conteudo'], PDO::PARAM_STR);
 
-        $add_contato->execute();
+                        $add_contato->execute();
 
-        if($add_contato->rowCount()){
-            echo "<p style='color: green;'>Mensagem enviada com sucesso!</p>";
-        }else{
-            echo "<p style='color: #f00;'>Erro: Mensagem não enviada com sucesso!</p>";
-        }
+                        if($add_contato->rowCount()){
+                            echo "<p style='color: green;'>Mensagem enviada com sucesso!</p>";
+                        }else{
+                            echo "<p style='color: #f00;'>Erro: Mensagem não enviada com sucesso!</p>";
+                        }
 
-    }
-    ?>
+                    }
+                ?>
 				
 			<form method="POST" action="">
 				<input class="w3-input w3-border" type="text" name="nome" placeholder="Nome completo" required>

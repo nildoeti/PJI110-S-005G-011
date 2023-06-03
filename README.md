@@ -41,15 +41,8 @@ integridade dos dados, promovendo um canal de comunicação com a comunidade.
 - [Kint PHP](https://kint-php.github.io/kint/settings/)
 
 ## Editor de código usado para o desenvolvimento do projeto
-- [Geany  - uma IDE rápida e leve Open Source](https://www.geany.org/)
+- [Kate - Editor de textos avançado](https://kate-editor.org/pt-br/)
 
 
 ## Protótipo para o projeto
 Este é um protótipo sugestivo com base nas informações repassadas pelo cliente e em pesquisas de concorrentes.
-
-
-![Protótipo](./img/prototipo-projeto-arcadascriancas.jpg)
-
-## Link para demostração do prototipo
-
-Acesse a demostração deste prototipo [AQUI](https://webstack.com.br/projetos/arcadascriancas/).
